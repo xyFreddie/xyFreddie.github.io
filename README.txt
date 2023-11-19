@@ -6,8 +6,9 @@ Customized by xyFreddie
 
 Credits:
 
-	Demo Images:
+	Images:
 		Unsplash (unsplash.com)
+		@余音 
 
 	Icons:
 		Font Awesome (fontawesome.io)
