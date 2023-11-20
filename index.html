@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -65,24 +66,72 @@
 						<!-- XAI -->
 							<article id="xai">
 								<h2 class="major">eXplainable AI</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<span class="image main"><img src="images/mmo.png" alt="" /></span>
+								<p><a href="https://dl.acm.org/doi/pdf/10.1145/2939672.2939778?">"Why Should I Trust You?" Explaining the Predictions of Any Classifier</a> </p>
+								<p>Research Project: A Comparison of Data Augmentation on Model Explainability for Medical Image Classification</p>
+								<p>This project aims to promote acceptance and trust of deep learning models among stakeholders (patients, doctors, etc.) in healthcare.</p>
+								<p>Under Construction</p>
 							</article>
 
 						<!-- DS -->
 							<article id="ds">
 								<h2 class="major">Data Science + </h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>I have extensive knowledge and project experiences in data science and quantitative fields and I believe in continuous learning. The "+" (Plus) stands for a wide spectrum of relevant subjects, spanning from statistics to philosophy and ethics of AI. For model transparency and explainability, check <a href="#xai">eXplainable AI</a>.</p>
-								<h3>Data Analytics</h3>
-								<h3>Machine Learning</h3>
-								<h3>Deep Learning</h3>
+
+								<p>I have extensive knowledge and project experiences in data science and quantitative fields, including classic machine learning (regression, random forests, SVM, K-Means, etc.), association rules, visualization, recommendation systems, and deep learning (computer vision, NLP). I believe in continuous learning. The "+" (Plus) stands for a wide spectrum of relevant subjects, spanning from statistics to ethical concerns of AI. For model transparency and explainability, check <a href="#xai">eXplainable AI</a>.</p>
+								
+								<h3>Visualization: Bridging Insight and Understanding</h3>
+								<p>Visualization is the foundation of effective communication and understanding in the data-driven world. I appreciate them in distilling complex information into clear, digestible insights. After learning about visualization principles (not just for making good-looking graphs), I start to notice some less optimal visualization I see in daily life and think about how to make them better. Here's a small example.</p>
+
+								<div id="plot"></div>
+
+								<script>
+							        var percentage = [21, 23, 23, 29, 34, 34, 50, 54, 66, 73];
+							        var reason = ['Immigration', 'Hostility to expats', 'Education', 'Refugee', 'Racism & discrimination', 'Trust in government', 'Healthcare', 'Climate change', 'Cost of living', 'Housing shortage'];
+
+							        var trace = {
+							            x: percentage,
+							            y: reason.map(reason => reason), 
+							            type: 'bar',
+							                    marker: {
+								            color: percentage,
+								            colorscale: 'Portland'
+								        },
+							            orientation: 'h'
+							        };
+
+							        var data = [trace];
+
+							        var layout = {
+							            title: 'Top Concerns for Dutchnews.nl readers in 2023',
+							            font: {
+							                color: 'white' // Title text color
+							            },
+							            xaxis: { title: 'Percentage of readers (%)',
+							            	showgrid: false  },
+							            paper_bgcolor:'rgba(0,0,0,0)',
+    									plot_bgcolor:'rgba(0,0,0,0)',
+    									margin: {
+								            l: 160, 
+								            r: 30, 
+								            t: 50, 
+								            b: 50 
+								        }
+							        };
+
+							        // Create the Plotly graph
+							        Plotly.newPlot('plot', data, layout);
+							    </script>
+
+							    <p>source: <a href="https://www.dutchnews.nl/2023/11/dutch-news-readers-vote-for-a-two-party-coalition-in-nl/" target="_blank">www.dutchnews.nl</a></p>
+ 								<!-- <h3>Deep Learning</h3>
 								<ul>
 									<li>Computer vision (CV)</li>
 									<li>Natural language processing (NLP)</li>
-								</ul>
-								<p>Under Construction</p>
+								</ul> -->
+
+								<h3>Data Mining</h3>
+								<p> <a href="https://drive.google.com/file/d/10v5Zzemm_zH7Yn16HRbeo-hARX96952U/view?usp=sharing" target="_blank">Review of <i>Exceptional Mobility Mining through Topic Modeling on Urban Social Media</i></a> </p>
+								<p>More contents Under Construction</p>
 							</article>
 
 						<!-- Contact -->
@@ -98,7 +147,7 @@
 								<p>More contents Under Construction</p>
 
 								<p>Thank you for stopping by. Do you have more thoughts that you'd like to discuss? Please send a message below.</p>
-								<span class="image left"><img src="images/beaver.png" alt="" /></span>
+								<!-- <span class="image left"><img src="images/beaver.png" alt="" /></span> -->
 
 								<form method="post" action="#">
 									<div class="fields">
